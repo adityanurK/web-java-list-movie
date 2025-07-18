@@ -1,0 +1,33 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <welcome-file-list>
+      <welcome-file>shows</welcome-file>  <!-- Servlet akan forward ke index.jsp -->
+  </welcome-file-list>
+  <servlet>
+      <servlet-name>TvMazeServlet</servlet-name>
+      <servlet-class>com.tvshowapp.TvMazeServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>TvMazeServlet</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+      <servlet-name>TvMazeServlet</servlet-name>
+      <url-pattern>/shows</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+      <servlet-name>TvShowDetailServlet</servlet-name>
+      <servlet-class>com.tvshowapp.TvShowDetailServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+      <servlet-name>TvShowDetailServlet</servlet-name>
+      <url-pattern>/detail</url-pattern>
+  </servlet-mapping>
+
+</web-app>
